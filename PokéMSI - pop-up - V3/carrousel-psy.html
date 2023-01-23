@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="fr" >
+<head>
+
+
+  <meta charset="UTF-8">
+  <title>PokeMSI - Carrousel Psy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous"><link rel="stylesheet" href="./stylecarrousel_psy.css">
+  <link rel="stylesheet" href="test.css">
+  <link href="http://fonts.cdnfonts.com/css/pokemon-solid" rel="stylesheet">
+</head>
+
+<header>
+  <a href="Accueil.html" > <img class="retour" src="Image/home.png"> </a>
+  <a href="Types.html" > <img class = "retour" src="Image/return.png"> </a>
+</header>
+
+<body >
+
+  <a href="Accueil.html"><img class ="logo" src="Image/logo.png"></a>
+
+<!-- partial:index.partial.html -->
+
+<div class="container">
+  <div class="card-carousel">
+
+    <div class="card" id="1">
+      <div id="myBtn" class="image-container"></div>
+      <h3>Theotime MOULINOT</h3>
+      <h4 class="tag_type">PSY</h4>
+    </div>
+
+    <div class="card" id="2">
+      <div id="myBtn2" class="image-container"></div>
+      <h3>Azzeddine LAHMAR</h3>
+      <h4 class="tag_type">PSY</h4>
+    </div>
+
+    <div class="card" id="3">
+      <div id="myBtn3" class="image-container"></div>
+      <h3>Rami MOULLA</h3>
+      <h4 class="tag_type">PSY</h4>
+    </div>
+
+  </div>
+  <a href="#" class="visuallyhidden card-controller">Carousel controller</a>
+  <script  src="./carrousel_java.js"></script>
+</div>
+
+<!-- Description dans la pop-up 1-->
+<div id="myModal" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p id=poke-info1></p>
+  </div>
+</div>
+
+<!-- Description dans la pop-up 2-->
+<div id="myModal2" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p id=poke-info2></p>
+  </div>
+</div>
+
+<!-- Description dans la pop-up 3-->
+<div id="myModal3" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p id=poke-info3></p>
+  </div>
+</div>
+
+<!-- Fin description -->
+
+
+  <script>
+  // Get the modal
+  var popup = document.getElementById("myModal");
+  var popup2 = document.getElementById("myModal2");
+  var popup3 = document.getElementById("myModal3");
+
+
+  // Get the button that opens the modal
+  var btn = document.getElementById("myBtn");
+  var btn2 = document.getElementById("myBtn2");
+  var btn3 = document.getElementById("myBtn3");
+
+  // Get the <span> element that closes the modal
+  var span = document.getElementsByClassName("close")[0];
+  var span2 = document.getElementsByClassName("close")[1];
+  var span3 = document.getElementsByClassName("close")[2];
+
+  // When the user clicks the button, open the popup
+  btn.onclick = function() {
+    popup.style.display = "block";
+  }
+
+  btn2.onclick = function() {
+    popup2.style.display = "block";
+  }
+
+  btn3.onclick = function() {
+    popup3.style.display = "block";
+  }
+
+
+  // When the user clicks on <span> (x), close the popup
+  span.onclick = function() {
+    popup.style.display = "none";
+  }
+
+  span2.onclick = function() {
+    popup2.style.display = "none";
+  }
+
+  span3.onclick = function() {
+    popup3.style.display = "none";
+  }
+
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+    if (event.target == popup) {
+      popup.style.display = "none";
+    }
+    if (event.target == popup2) {
+      popup2.style.display = "none";
+    }
+    if (event.target == popup3) {
+      popup3.style.display = "none";
+    }
+  }
+
+  let PokemonA = {
+    PV: '60',
+    Type: 'Psy',
+    Faiblesse: 'Normal',
+    Genre:'Image/hom.png',
+    Entreprise: 'Soon',
+    Cap_Spe: 'Insomnia',
+    Description: 'Ne peut être endormi',
+    Totem: 'Image/poke_theo.png',
+    image: 'Image/theo.gif'
+  }
+   let PokemonB = {
+    PV: '56',
+    Type: 'Psy',
+    Faiblesse: 'Normal',
+    Genre:'Image/hom.png',
+    Entreprise: 'Société Générale',
+    Cap_Spe: 'Tempo Perso',
+    Description: 'Empêche la confusion',
+    Totem: 'Image/poke_azz.png',
+    image: 'Image/azz.gif'
+  }
+  let PokemonC = {
+    PV: '138',
+    Type: 'Psy',
+    Faiblesse: 'Normal',
+    Genre:'Image/hom.png',
+    Entreprise: 'SFR',
+    Cap_Spe: 'Délestage',
+    Description: 'Perd son objet fétiche lors de l attaque',
+    Totem: 'Image/poke_rami.png',
+    image: 'Image/rami.gif'
+  }
+
+
+
+  //let firstPoke = new Pokemon('Dark Beginnings', 45, true);
+  //let secondPoke = new Pokemon('The Mystery Continues', 45, false);
+
+  //let tab = [firstPoke, secondPoke];
+
+  // ====================================
+
+  document.querySelector('#poke-info1').innerHTML = `
+  <div class="box">
+    <nav>
+      <ul>PV: ${PokemonA.PV}</ul>
+      <ul>Type: ${PokemonA.Type} </ul>
+      <ul>Faiblesse: ${PokemonA.Faiblesse} </ul>
+      <ul>Genre: <img id="gen" src='${PokemonA.Genre}'/></ul>
+      <ul>Entreprise: ${PokemonA.Entreprise}</ul>
+      <ul>Capacite speciale: ${PokemonA.Cap_Spe}</ul>
+      <ul>Description: ${PokemonA.Description}</ul>
+      <ul>Totem: <img id="evo" src='${PokemonA.Totem}'/></ul>
+    </nav>
+    <img id="poke" src='${PokemonA.image}'/>
+  </div>`
+
+  document.querySelector('#poke-info2').innerHTML = `
+  <div class="box">
+    <nav>
+      <ul>PV: ${PokemonB.PV}</ul>
+      <ul>Type: ${PokemonA.Type} </ul>
+      <ul>Faiblesse: ${PokemonA.Faiblesse} </ul>
+      <ul>Genre: <img id="gen" src='${PokemonB.Genre}'/></ul>
+      <ul>Entreprise: ${PokemonB.Entreprise}</ul>
+      <ul>Capacite speciale: ${PokemonB.Cap_Spe}</ul>
+      <ul>Description: ${PokemonB.Description}</ul>
+      <ul>Totem: <img id="evo" src='${PokemonB.Totem}'/></ul>
+    </nav>
+    <img id="poke" src='${PokemonB.image}'/>
+  </div>`
+
+  document.querySelector('#poke-info3').innerHTML = `
+  <div class="box">
+    <nav>
+      <ul>PV: ${PokemonC.PV}</ul>
+      <ul>Type: ${PokemonA.Type} </ul>
+      <ul>Faiblesse: ${PokemonA.Faiblesse} </ul>
+      <ul>Genre: <img id="gen" src='${PokemonC.Genre}'/></ul>
+      <ul>Entreprise: ${PokemonC.Entreprise}</ul>
+      <ul>Capacite speciale: ${PokemonC.Cap_Spe}</ul>
+      <ul>Description: ${PokemonC.Description}</ul>
+      <ul>Totem: <img id="evo" src='${PokemonC.Totem}'/></ul>
+    </nav>
+    <img id="poke" src='${PokemonC.image}'/>
+  </div>`
+
+
+  </script>
+
+</body>
+
+
+<footer><a href="Apropos2.html"> <div class="footer">A propos du projet</div></a></footer>
+</html>

@@ -1,0 +1,554 @@
+@import url('http://fonts.cdnfonts.com/css/pokemon-solid');
+
+* {
+  box-sizing: border-box;
+  margin : 0;
+  padding : 0;
+}
+
+
+.logo{
+  display: block;
+  width : 48%;
+  height : 48%;
+  margin-top : 0em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tag_type{
+  font-family :"Pokemon Solid";
+  font-size: 25px;
+  background-image: linear-gradient(to left, red, red, red, red, red, red, red);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+}
+
+body {
+  font-family: system-ui;
+  background: url(Image/background.jpeg);
+}
+
+
+
+header{
+  flex-direction:column;
+  flex-direction:row-reverse;
+  justify-content: flex-end;
+}
+
+.footer{
+  font-family :"Pokemon Solid";
+  font-size: 20px;
+  color : yellow;
+  text-align :center;
+  display : block;
+  margin-top : 5em;
+}
+
+.footertype{
+  font-family :"Pokemon Solid";
+  font-size: 20px;
+  color : yellow;
+  text-align :center;
+  display : block;
+  margin-top : 7em;
+}
+
+.footer_rocket{
+  font-family :"Pokemon Solid";
+  font-size: 20px;
+  color : yellow;
+  text-align :center;
+  display : block;
+  margin-top : 20%;
+}
+
+.retour {
+  width : 3%;
+  height :3%;
+}
+
+.img_rocket {
+  display: block;
+  margin-top: 1em;
+  width : 30%;
+
+}
+
+.font_rocket_1{
+  font-family :"Pokemon Solid";
+  font-size: 20px;
+  color : red;
+  margin-left : 20%;
+  margin-top : -20%;
+}
+
+.font_rocket_2{
+  font-family :"Pokemon Solid";
+  color : red;
+  font-size: 20px;
+  margin-left : 65%;
+  margin-top : -4%;
+
+}
+
+
+.visuallyhidden {
+  position: absolute;
+  z-index: -1;
+  right: 0;
+  opacity: 0;
+
+}
+
+
+.container {
+  overflow: hidden;
+  padding: 10px;
+  margin-top: 1em;
+  background: rgba(0,0,0,.1)
+}
+
+.card-carousel {
+  --card-width: 80%;
+  --card-max-width: 280px;
+  --card-height: 350px;
+  --carousel-min-width: 600px;
+  z-index: 1;
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  height: var(--card-height);
+  min-width: var(--carousel-min-width);
+  transition: filter .3s ease;
+}
+
+
+.card-carousel.smooth-return {
+  transition: all .2s ease;
+}
+
+.card-carousel .card {
+  background: whitesmoke;
+  width: var(--card-width);
+  max-width: var(--card-max-width);
+  text-align: center;
+  padding: 1em;
+  min-width: 250px;
+  height: var(--card-height);
+  position: absolute;
+  margin: 0 auto;
+  color: rgba(0,0,0,.5);
+  transition: inherit;
+  -webkit-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.3);
+  -moz-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.3);
+  box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.3);
+  border-radius: 1em ;
+  border : solid 2px black;
+  filter: brightness(.9);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.card.highlight {
+  filter: brightness(1)
+}
+
+
+.card:nth-of-type(1) .image-container {
+    background-image: url(Image/cindy.gif);
+}
+
+.card:nth-of-type(2) .image-container {
+  background-image: url(Image/rayan.gif)
+}
+
+.card:nth-of-type(3) .image-container {
+  background-image: url(Image/florian.gif)
+}
+
+
+.image_legend{
+  width : 40%;
+  height : 10%;
+  margin-top : 1em;
+}
+
+
+
+.image-container {
+  width: 8em;
+  height: 8em;
+  position: relative;
+  background-size: cover;
+  margin-bottom: 2em;
+  border-radius: 100%;
+  padding: 1em;
+  -webkit-box-shadow: inset 0px 0px 17px 0px rgba(0,0,0,0.3);
+  -moz-box-shadow: inset 0px 0px 17px 0px rgba(0,0,0,0.3);
+   box-shadow: inset 0px 0px 17px 0px rgba(0,0,0,0.3);
+
+}
+
+.image-container::after {
+  content: "";
+  display: block;
+  width: 120%;
+  height: 120%;
+  border: solid 3px black;
+  border-radius: 100%;
+  position: absolute;
+  top: calc(-10% - 3px);
+  left: calc(-10% - 3px);
+}
+
+h2 {
+  padding: 1em;
+  margin-top: 1em;
+  background: rgba(0,0,0,.3);
+  text-align: center;
+  color: white;
+  border-radius: .2em;
+  display: inline-block;
+  transform: translateX(calc((100vw - 100%) / 2))
+}
+
+h2 a {
+  color: #f5b916
+}
+
+.h3propos {
+  color : white;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top : 2em;
+
+}
+
+.propos{
+  color : white;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top : 1em;
+}
+
+.bigcontainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  margin: auto;
+  /* border: 2px solid white; */
+  width: 85%;
+  height: 45%;
+}
+
+.smallcontainer {
+  padding-top: 35px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction:line;
+  flex-grow: 1;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  max-width: 1200px;
+  margin: auto;
+  width: 70%;
+
+}
+
+a {
+  text-decoration: none;
+  color:white;
+}
+
+
+form{
+  color: white;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top : 1em;
+}
+
+.bigcontainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  margin: auto;
+  /* border: 2px solid white; */
+  width: 85%;
+  height: 45%;
+}
+
+.smallcontainer {
+  padding-top: 35px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction:line;
+  flex-grow: 1;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  max-width: 1200px;
+  margin: auto;
+  width: 70%;
+
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin : 10px;
+  padding: 25px;
+  border : none;
+  color:white; /* font color */
+  cursor:pointer;
+  border-radius: 10px; /*contours arrondis*/
+  /*width:100px; taille de la box */
+  height: 30px;
+  line-height: 15px; /*alignement horizontal du texte à l'intérieur de la box*/
+  text-align:center;
+  /* position: relative; */
+  text-transform: uppercase; /*mettre le texte en maj*/
+  transition: 0.3s;
+}
+
+/*-------------------- PAGE D'ACCUEIL -------------------- */
+.pokemon {
+  background: transparent;
+  box-shadow: 0px 0px 0px 5px rgba(white ,0.95);
+  border: 4px solid yellow;
+  color:yellow;
+  transition: .3s all ease-in-out;
+  text-size-adjust: auto;
+}
+.pokemon:hover {
+  background: linear-gradient(90deg, rgba(250,239,11,1) 0%, rgba(255,149,0,1) 100%);
+  color: black;
+  font-weight: bold;
+  box-shadow: 0px 0px 10px 5px yellow;
+}
+
+.team_rocket {
+  background: transparent;
+  box-shadow: 0px 0px 0px 5px rgba(white ,0.95);
+  border: 4px solid yellow;
+  color:yellow;
+  transition: .3s all ease-in-out;
+}
+.team_rocket:hover {
+  background: linear-gradient(90deg, rgba(250,239,11,1) 0%, rgba(255,149,0,1) 100%);
+  color: black;
+  font-weight: bold;
+  box-shadow: 0px 0px 10px 5px yellow;
+}
+
+.a_propos {
+  background: transparent;
+  box-shadow: 0px 0px 0px 5px rgba(white ,0.95);
+  border: 4px solid yellow;
+  color:yellow;
+  transition: .3s all ease-in-out;
+}
+.a_propos:hover {
+  background: linear-gradient(90deg, rgba(250,239,11,1) 0%, rgba(255,149,0,1) 100%);
+  color: black;
+  font-weight: bold;
+  box-shadow: 0px 0px 10px 5px yellow;
+}
+
+.sources {
+  background: transparent;
+  box-shadow: 0px 0px 0px 5px rgba(white ,0.95);
+  border: 4px solid yellow;
+  color:yellow;
+  transition: .3s all ease-in-out;
+}
+.sources:hover {
+  background: linear-gradient(90deg, rgba(250,239,11,1) 0%, rgba(255,149,0,1) 100%);
+  color: black;
+  font-weight: bold;
+  box-shadow: 0px 0px 10px 5px yellow;
+}
+
+/* -------------------- PAGE TROUVE TON POKEMON -------------------- */
+/* BOUTON 1 */
+.btn1 {
+  background: transparent;
+  box-shadow: 0px 0px 0px 5px rgba(white ,0.95);
+  border: 4px solid yellow;
+  color:yellow;
+  transition: .3s all ease-in-out;
+}
+.btn1:hover {
+  background: linear-gradient(90deg, rgba(198,5,5,1) 9%, rgba(128,43,0,1) 88%);
+  color: black;
+  font-weight: bold;
+  box-shadow: 0px 0px 10px 5px yellow;
+}
+/* BOUTON 2 */
+.btn2 {
+  background: transparent;
+  box-shadow: 0px 0px 0px 5px rgba(white ,0.95);
+  border: 4px solid yellow;
+  color:yellow;
+  transition: .3s all ease-in-out;
+  }
+.btn2:hover {
+  background: linear-gradient(90deg, rgba(255,245,245,0.8860586470916492) 9%, rgba(254,242,10,1) 70%);
+  color: black;
+  font-weight: bold;
+  box-shadow: 0px 0px 10px 5px yellow;
+  }
+/* BOUTON 3 */
+.btn3 {
+  background: transparent;
+  box-shadow: 0px 0px 0px 5px rgba(white ,0.95);
+  border: 4px solid yellow;
+  color:yellow;
+  transition: .3s all ease-in-out;
+  }
+.btn3:hover {
+  background: linear-gradient(90deg, rgba(204,0,102,1) 9%, rgba(224,116,170,1) 70%);
+  color: black;
+  font-weight: bold;
+  box-shadow: 0px 0px 10px 5px yellow;
+  }
+/* BOUTON 4 */
+.btn4 {
+  background: transparent;
+  box-shadow: 0px 0px 0px 5px rgba(white ,0.95);
+  border: 4px solid yellow;
+  color:yellow;
+  transition: .3s all ease-in-out;
+  }
+.btn4:hover {
+  background: linear-gradient(90deg, rgba(204,0,102,0.4462827367275035) 9%, rgba(102,0,102,1) 70%);
+  color: black;
+  font-weight: bold;
+  box-shadow: 0px 0px 10px 5px yellow;
+  }
+/* BOUTON 5 */
+.btn5 {
+  background: transparent;
+  box-shadow: 0px 0px 0px 5px rgba(white ,0.95);
+  border: 4px solid yellow;
+  color:yellow;
+  transition: .3s all ease-in-out;
+  }
+.btn5:hover {
+  background: linear-gradient(90deg, rgba(0,0,77,1) 30%, rgba(102,0,102,0.7572071064754027) 97%);
+  color: black;
+  font-weight: bold;
+  box-shadow: 0px 0px 10px 5px yellow;
+  }
+/* BOUTON 6 */
+.btn6 {
+  background: transparent;
+  box-shadow: 0px 0px 0px 5px rgba(white ,0.95);
+  border: 4px solid yellow;
+  color:yellow;
+  transition: .3s all ease-in-out;
+  }
+.btn6:hover {
+  background: linear-gradient(90deg, rgba(92,92,138,0.8860586470916492) 30%, rgba(0,0,77,0.7319970224417892) 97%);
+  color: black;
+  font-weight: bold;
+  box-shadow: 0px 0px 10px 5px yellow;
+  }
+/* BOUTON 7 */
+.btn7 {
+  background: transparent;
+  box-shadow: 0px 0px 0px 5px rgba(white ,0.95);
+  border: 4px solid yellow;
+  color:yellow;
+  transition: .3s all ease-in-out;
+  }
+.btn7:hover {
+  background: linear-gradient(90deg, rgba(4,4,16,0.9084676106770834) 25%, rgba(0,51,51,1) 67%);
+  color: black;
+  font-weight: bold;
+  box-shadow: 0px 0px 10px 5px yellow;
+  }
+  /* BOUTON 8 */
+.btn8 {
+  background: transparent;
+  box-shadow: 0px 0px 0px 5px rgba(white ,0.95);
+  border: 4px solid yellow;
+  color:yellow;
+  transition: .3s all ease-in-out;
+  }
+.btn8:hover {
+  background: linear-gradient(45deg, #ff0000,
+  #ff7300, #fffb00, #48ff00, #00ffd5,
+  #002bff, #7a00ff, #ff00c8, #ff0000);
+  color: black;
+  font-weight: bold;
+  box-shadow: 0px 0px 10px 5px yellow;
+  }
+
+
+
+/**************************************************************************/
+
+@media screen and (max-width: 440px) {
+  .demo{
+    font-size: 90px;
+
+  }
+  .card-carousel {
+    margin-left: calc((100vw - var(--carousel-min-width) - 40px) / 2)
+  }
+  .retour{
+    width : 10%;
+    height : 10%;
+  }
+  .logo{
+    width : 80%;
+    height : 80%;
+    margin-top : 1em;
+  }
+  .btn
+  {
+    width:120px;
+  }
+  .footer{
+    margin-top : 0em;
+  }
+  .footer_rocket{
+    margin-top : 14em;
+  }
+  .img_rocket {
+    margin-top : 3em;
+    width : 50%
+  }
+  .font_rocket_1{
+    font-family :"Pokemon Solid";
+    font-size: 11px;
+    color : red;
+    margin-left : 1%;
+    margin-top : -30%;
+  }
+
+  .font_rocket_2{
+    font-family :"Pokemon Solid";
+    color : red;
+    font-size: 11px;
+    margin-left : 68%;
+    margin-top : -10%;
+
+  }
+
+}
